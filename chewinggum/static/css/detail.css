@@ -1,0 +1,30 @@
+
+html, body {
+    background: #ebebea;
+}
+
+/* @media(max-width: 767px) {
+    html, body {
+        margin: 0 3%;
+    }
+} */
+
+.title {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 48px;
+    font-weight: 600;
+    margin-top: 120px;
+}
+
+.tag {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 24px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-decoration: underline;
+    color: gray;
+}
+
+.row p {
+    padding: 0 0 72px 0;
+}

@@ -1,0 +1,49 @@
+html, body {
+    background-color: burlywood;
+}
+
+.title h2{
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    text-decoration: underline;
+    margin-top: 122px;
+    margin-bottom: 80px;
+}
+
+.blog-card {
+    margin: 8px;
+    height: auto;
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.blog-img {
+    float: left;
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+}
+
+.blog-img:hover {
+    opacity: 0.6;
+}
+
+.blog-title a {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 24px;
+    font-weight: 550;
+    text-decoration: none;
+    color: black;
+}
+
+.blog-tag {
+    color: gray;
+}

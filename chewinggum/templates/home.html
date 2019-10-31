@@ -1,0 +1,120 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+<title>一定要一个月内完成</title>
+{% endblock %}
+
+{% block css %}
+<!-- The Section 2 CSS -->
+<link rel="stylesheet" href="{% static 'css/st2.css' %}">
+<!-- The Section 3 CSS -->
+<link rel="stylesheet" href="{% static 'css/st3.css' %}">
+<!-- The Section 4 CSS -->
+<link rel="stylesheet" href="{% static 'css/st4.css' %}">
+{% endblock %}
+
+{% block main %}
+<!-- Content Zone -->
+<!-- section 1 -->
+<div class="bg-fullscreen"></div>
+<!-- The Section 2 -->
+<div id="container" class="st2-container">
+    <div class="CGtitle">
+        <h2>和聚美文</h2>
+    </div>
+    <div class="row st2-row">
+        {% for category in categories %}
+        <div class="col-lg-4 col-md-4 col-xs-12">
+            <div class="ih-item circle effect top_to_bottom">
+                <a href="{% url 'category_posts' category.id %}">
+                    <div class="img">
+                        <img class="img-reponsive center-block" src="{% static 'img/1.jpg' %}" alt="">
+                    </div>
+                    <div class="info">
+                        <h3>总篇幅{{ category.posts_count }}</h3>
+                        <p>浏览量25</p>
+                    </div>
+                </a>
+            </div>
+            <div class="st2-fontstyle">
+                <a href="#">{{ category.name }}</a>
+                <p>{{ category.desc }}</p>
+            </div>
+            <a class="st2-btn" href="{% url 'category_posts' category.id %}">更多</a> 
+        </div>
+        {% endfor %}
+    </div>
+</div>
+<!-- The Section 3 -->
+<div id="textSlider">
+    <div class="CGtitle">
+        <h2>新鲜事急速报</h2>
+    </div>
+    <div class="MS-content">
+        {% for latest_post in latest_posts %}
+        <div class="item">
+            <h2><i class="fa fa-quote-left" aria-hidden="true"></i><a class="st3-title" href="{% url 'detail' latest_post.id %}">{{ latest_post.title }}</a><i class="fa fa-quote-right" aria-hidden="true"></i></h1>
+            <p>{{ latest_post.content|truncatechars:150 }}...</p>
+            <h4>{{ latest_post.tag }},{{ latest_post.created_time }},{{ latest_post.owner }}</h4>
+        </div>
+        {% endfor %}
+    </div>
+    <div class="MS-controls">
+        <button class="MS-left"><i class="fa fa-chevron-left" aria-hidden="true"></i></button>
+        <button class="MS-right"><i class="fa fa-chevron-right" aria-hidden="true"></i></button>
+    </div>
+</div>
+<!-- The Section 4 -->
+<div id="container" class="st4-container">
+    <div class="st4-title">
+        <h2>知识大杂烩</h2>
+    </div>
+    <div id="filter-control" class="text-center">
+        <a data-tag="all" href="#" class="btn filter-layout active">所有</a>
+        <a data-tag="WebCrawler" href="#" class="btn filter-layout">爬虫百例</a>
+        <a data-tag="DataMining" href="#" class="btn filter-layout">数据挖掘</a>
+        <a data-tag="NLP" href="#" class="btn filter-layout">自然语言处理</a>  
+    </div>
+    <div class="row" id="postlist">
+        {% for cate_post in latest_posts %}
+        <div class="col-md-5 col-xs-12 blog-left" data-category="WebCrawler">
+            <a href="{% url 'detail' cate_post.id %}"><img class="blog-img" src="{% static 'img\st4-3.jpg' %}"></a>
+            <div class="blog-content">
+                <h6>{{ cate_post.tag }},{{ cate_post.created_time }}</h6>
+                <h3><a href="#"></a></h3>
+                <p>{{ cate_post.content|truncatechars:100 }}...</p>
+                <a href="{% url 'detail' cate_post.id %}" class="st4-a">more</a> 
+            </div>
+        </div>
+        {% endfor %}
+        <div class="col-md-12 col-xs-12 text-center">
+            <a href="#"><i class="fa fa-plus" aria-hidden="true"></i></a>
+        </div>
+    </div>
+</div>  
+{% endblock %}
+
+{% block js %}
+<!-- The Section 3 JS -->
+<script src="{% static 'js/jquery-2.2.4.min.js' %}"></script>
+<script> jq224 = jQuery.noConflict(true)</script>
+<script src="{% static 'js/st3.js' %}"></script>
+<script>
+    jq224('#textSlider').multislider({
+            slideAll: true,
+            autoSlide: true,
+            duration: 1000,
+            interval: 4000
+        });
+</script>
+<!-- The Section 4 JS -->
+<script src="{% static 'js/st4.js' %}"></script>
+<script>
+    $(document).ready(function () {
+        $('#postlist').lingGalleryFilter({
+                tagContainer: $('#filter-control'),
+            });
+    });
+</script>
+{% endblock %}

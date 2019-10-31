@@ -1,0 +1,60 @@
+    {% extends 'base.html' %}
+    {% load static %}
+
+    {% block title %}
+    <title>Title</title>
+    {% endblock %}
+
+    {% block css %}
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- sideNav CSS -->
+    <link rel="stylesheet" href="{% static 'css\sidenav.css' %}">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <!-- Content CSS -->
+    <link rel="stylesheet" href="{% static 'css\blog.css' %}">
+    {% endblock %}
+
+    {% block main %}
+    <!-- Content Zone -->
+    <div class="title">
+        <h2>所有</h2>
+    </div>
+    <!-- Masonry -->
+    <div class="row masonry"
+         data-target=".blog-card"
+         data-col-xs="12"
+         data-col-sm="6"
+         data-col-md="3">
+        
+        {% for cate_post in cate_posts %}
+        <div class="blog-card">
+            <div class="blog-content">
+                <a href="#"><img class="blog-img" alt=""></a>
+                <div class="blog-title">
+                    <a href="{% url 'detail' cate_post.id %}">{{ cate_post.title }}</a>
+                </div>
+                <div class="blog-tag">
+                    python, 2019-10-14,Chewinggum
+                </div>
+                <div class="blog-text">
+                    {{ cate_post.content|truncatechars:100 }}
+                </div>
+            </div>
+        </div>
+        {% endfor %}    
+    </div>
+    {% endblock %}
+         
+    {% block js %}
+    <!-- sideNav JS -->
+    <script src="{% static 'js\sidenav.js' %}"></script>
+    <!-- Content JS -->
+    <script src="{% static 'js\bootstrap4.masonry.js'%}"></script>
+    <script type="text/javascript">
+        $(function() {
+            $('.masonry').masonry();
+        });
+    </script>
+    {% endblock %}

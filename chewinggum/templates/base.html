@@ -1,0 +1,108 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    {% block title %}
+    {% endblock %}
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <!-- sideNav CSS -->
+    <link rel="stylesheet" href="{% static 'css/sidenav.css' %}">
+    <!-- footer CSS -->
+    <link rel="stylesheet" href="{% static 'css/st5.css' %}">
+    {% block css %}
+    {% endblock %}
+</head>
+  <body>
+        <header>
+            <nav class="navbar navbar-expand-md fixed-top font-weight-bold">
+                <a class="navbar-brand nav-link p-2" href="{% url 'home' %}">
+                Chewinggum
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent"
+                        aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'home' %}">
+                                &nbsp;<i class="fas fa-home"></i>&nbsp; 首页
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'category_posts' 1 %}">
+                                &nbsp;<i class="fas fa-info-circle"></i>&nbsp; 爬虫系列
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'category_posts' 2 %}">
+                                &nbsp;<i class="fas fa-calendar-alt"></i>&nbsp; 数据挖掘
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'category_posts' 3 %}">
+                                &nbsp;<i class="fas fa-images"></i>&nbsp; NLP
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                &nbsp;<i class="fab fa-youtube"></i>&nbsp; 其他知识
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="http://l2752652s6.zicp.vip:10439/survey">
+                                &nbsp;<i class="fas fa-cog"></i>&nbsp; 问卷
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://github.com/adair1219/">
+                                &nbsp;<i class="fab fa-github"></i>&nbsp; Github
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                &nbsp;<i class="fas fa-sign-in-alt"></i>&nbsp; 登录/注册
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+    
+            <nav class="sidenav"></nav>
+        </header>
+
+        {% block main %}
+        {% endblock %}
+        
+        <div id="container" class="st5-container">
+            <div class="row">
+                <div class="col-md-6 col-ms-6">
+                    <ul>
+                        <li>QQ</li>
+                        <li>电话</li>
+                        <li>邮箱</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!-- sideNav JS -->
+    <script src="{% static 'js/sidenav.js' %}"></script>
+    {% block js %}
+    {% endblock %}
+  </body>
+</html>

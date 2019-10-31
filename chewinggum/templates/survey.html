@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>网站体验满意程度调查</title>
+    <style>
+        h1 {
+            color: blue;
+            text-align: center;
+        }
+
+        h4 {
+            margin-bottom: 0;
+        }
+
+        form {
+            margin-left: 16%;
+        }
+
+        @media(max-width: 767px){
+            form {
+                margin-left: 0;
+            }
+        }
+
+        h3 {
+            text-align: center;
+        }
+
+        .submit {
+            margin-bottom: 100px;
+            
+        }
+
+        p {
+            color: gray;
+        }
+
+    </style>
+</head>
+<body>
+    <h1 class="title">网站体验满意程度调查表</h1>
+    <h3 class="description">亲爱的各位同学、尊敬的各位老师，感谢你在百忙之中填写这份问卷！从自学前端、后端断断续续<br>
+         4 个月了，今日终于要开始内测了。本网站的主题是在上面上传一些自己在学习过程中的所学所想。<br>
+         同时，我也有意将此网站作为起点，打造自己的品牌。您参与此次的问卷调查对我未来网站的建设<br>
+         至关重要。感谢您的参与！
+    </h3>
+    <form action="{% url 'home' %}" method="POST" >
+        {% csrf_token %}
+        <h4>1.您对新网站的综合使用感受是：</h4><br>
+        <input type="radio" name="1" value="1-A">满意<br>
+        <input type="radio" name="1" value="1-B">一般<br>
+        <input type="radio" name="1" value="1-C">不满意<br>
+        <hr>
+        <h4>2.您会不会把我们的产品/网站推荐给朋友或同事?</h4><br>
+        <input type="radio" name="2" value="2-A">会<br>
+        <input type="radio" name="2" value="2-B">考虑考虑<br>
+        <input type="radio" name="2" value="2-C">不会<br>
+        <hr>
+        <h4>3.从1到10分，您给我们产品/网站打多少分？</h4><br>
+        <input type="text" name="3"><br>
+        <hr>
+        <h4>4.需要的资料或者信息在新网站上可以快速找到:</h4><br>
+        <input type="radio" name="4" value="4-A">快速<br>
+        <input type="radio" name="4" value="4-B">一般<br>
+        <input type="radio" name="4" value="4-C">龟速<br>
+        <hr>
+        <h4>5.您对我们的网站最不喜欢的地方是什么？</h4><br>
+        <input type="radio" name="5" value="5-A">导航复杂<br>
+        <input type="radio" name="5" value="5-B">配色令人不舒服<br>
+        <input type="radio" name="5" value="5-C">主题不鲜明<br>
+        <input type="radio" name="5" value="5-D">没有<br>
+        <hr>
+        <h4>6.我们的网站使用起来简单吗？</h4><br>
+        <input type="radio" name="6" value="6-A">简单<br>
+        <input type="radio" name="6" value="6-B">一般<br>
+        <input type="radio" name="6" value="6-C">复杂<br>
+        <hr>
+        <h4>7.我们的网站的哪些功能对您最重要？</h4><br>
+        <input type="radio" name="7" value="7-A">侧边导航<br>
+        <input type="radio" name="7" value="7-B">评论<br>
+        <input type="radio" name="7" value="7-C">登录注册<br>
+        <hr>
+        <h4>8.您最想让我们增加的一个功能是什么？</h4><br>
+        <input type="radio" name="8" value="8-A">视频<br>
+        <input type="radio" name="8" value="8-B">小游戏<br>
+        <input type="radio" name="8" value="8-C">文章归类<br>
+        <hr>
+        <h4>9.您最开始使用我们的产品/网站时，您的目标或着期望是什么？</h4><br>
+        <input type="radio" name="9" value="9-A">快速找到具体文章<br>
+        <input type="radio" name="9" value="9-B">找到分类下的文章<br>
+        <input type="radio" name="9" value="9-C">其他<br>
+        <hr>
+        <h4>10.您进入我们网站时的第一印象是什么？</h4><br>
+        <input type="radio" name="10" value="10-A">简洁<br>
+        <input type="radio" name="10" value="10-B">时尚<br>
+        <input type="radio" name="10" value="10-C">low B<br>
+        <hr>
+        <h4>11.我们的网站页面上有什么遗漏内容吗？</h4><br>
+        <input type="text" name="11"><br><p>若没有建议请填无</p>
+        <hr>
+        <input  class="submit" type="submit" value="提交并回到首页">
+
+        
+    </form>
+    
+
+    
+</body>
+</html>
