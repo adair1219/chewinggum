@@ -1,0 +1,85 @@
+/* ------------------------------------------------------------- */
+#fullpage,  .sections,  .section {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    display: block;
+}
+
+.pages {
+    position: fixed;
+    right: 10px;
+    top: 50%;
+    list-style: none;
+}
+
+.pages li {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #fff;
+    margin: 15px 0 0 7px;
+}
+
+.pages li.active {
+    margin-left: 0;
+    width: 14px;
+    height: 14px;
+    border: 4px solid #FFFFFF;
+    background: none;
+}
+/* ------------------------------------------------------------- */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: 0 0;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    -webkit-tap-highlight-color: transparent;
+}
+
+html {
+    color: -internal-root-color;
+}
+
+/* -------- */
+/* body {
+    background: #fff;
+    color: #222;
+    padding: 0;
+    margin: 0;
+    font-family: "Helvetica Neue",Helvetica,Roboto,Arial,sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1.5;
+    position: relative;
+    cursor: auto;
+    background-image: url('D:\qijia\static\image\background.jpg');
+    background-attachment: fixed;
+} */
+
+/* ------------------------------------------------------------------ main */
+.row {
+    margin-top: 5%;
+    margin-bottom: 6%;
+}
+
+.title {
+    font-size: 30px;
+    margin-top: 30px;
+    text-align: center;
+    display: inline-block;
+    color: #fff;
+    font-family: asap;
+    border-bottom: 5px solid #5677fc;
+}

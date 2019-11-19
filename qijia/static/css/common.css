@@ -1,0 +1,143 @@
+/* --------------------------------- header-left */
+.header-left {
+    position: fixed;
+    z-index: 20;
+    top: 0;
+    left: 0;
+    height: 56px;
+    display: block;
+}
+
+.header-left div {
+    display: block;
+    float: left;
+}
+
+.header-left .logo {
+    transition: .3s;
+}
+
+.header-left .logo img {
+    height: 56px;
+    width: auto;
+    padding: 8px 16px;
+}
+
+.header-left .menu a {
+    text-decoration: none;
+    color: #fff;
+    line-height: inherit;
+    position: relative;
+    height: 56px;
+    display: block;
+    float: left;
+    text-align: center;
+    font-size: 18px;
+    font-family: opensans;
+    font-weight: 400;
+    padding: 14px 16px;
+}
+/* ---------- header-right */
+.header-right {
+    position: fixed;
+    z-index: 20;
+    top: 0;
+    right: 0;
+    height: 56px;
+    display: block;
+}
+
+.header-right div {
+    display: block;
+    float: right;
+}
+
+.header-right .menu a {
+    text-decoration: none;
+    color: #fff;
+    line-height: inherit;
+    position: relative;
+    height: 56px;
+    display: block;
+    float: right;
+    text-align: center;
+    font-size: 18px;
+    font-family: opensans;
+    font-weight: 400;
+    padding: 14px 5px;
+}
+/* ------------------------------------------------------- search */
+#header-search {
+    height: 56px;
+    position: relative;
+    display: block;
+    float: right;
+    padding: 14px 18px;
+    font-family: opensans;
+}
+/* #header-search input[type="text"] {
+    background: url(search.png) no-repeat 10px 6px #fcfcfc;
+    border: 1px solid #d1d1d1;
+    font: bold 12px opensans;
+    color: #bebebe;
+    width: 107px;
+    padding: 6px 15px 6px 35px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    text-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15) inset;
+    -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15) inset;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15) inset;
+    -webkit-transition: all 0.7s ease 0s;
+    -moz-transition: all 0.7s ease 0s;
+    -o-transition: all 0.7s ease 0s;
+    transition: all 0.7s ease 0s;
+}
+  
+#search_light input[type="text"]:focus { 
+    width: 150px; 
+} */
+
+/* ----------------------------------- footer-right */
+.footer-right {
+    position: fixed;
+    bottom: 20px;
+    right: 56px;
+    margin-right: -8px;
+    color: #fff;
+    font-size: 18px;
+    font-family: asap;
+    font-weight: 400;
+}
+
+.footer-right a {
+    text-decoration: none;
+    color: #fff;
+    -webkit-transition: .3s;
+    transition: .3s;
+    display: inline-block;
+    padding: 5px 8px;
+}
+/* footer-left */
+.footer-left {
+    position: fixed;
+    bottom: 20px;
+    left: 56px;
+    margin-left: -8px;
+    color: #fff;
+    font-size: 18px;
+    font-family: asap;
+    font-weight: 400;
+}
+
+.footer-left a {
+    text-decoration: none;
+    color: #fff;
+    -webkit-transition: .3s;
+    transition: .3s;
+    display: inline-block;
+    padding: 5px 8px;
+}
+
+

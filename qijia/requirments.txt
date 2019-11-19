@@ -1,0 +1,6 @@
+django==2.2
+python==3.8.0
+pymysql
+mysql
+pillow
+django-xadmin

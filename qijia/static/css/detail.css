@@ -1,0 +1,129 @@
+/* html, body {
+    background-image: url('D:\qijia\static\images\read.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+} */
+html, body {
+    padding: 0;
+    margin: 0;
+    background-color: burlywood;
+}
+
+.container {
+    margin-top: 5%;
+    margin-bottom: 6%;
+}
+
+/* ----------------------------------------------------------- main */
+.main {
+    background-color: #ffffff;
+}
+
+.main .title {
+    font-size: 30px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: left;
+    color: black;
+    font-family: asap;
+    font-weight: 700;
+}
+
+.main .info{
+    padding-bottom: 15px;
+    border-bottom: 2px solid gray;
+}
+
+.main .info span{
+    margin-right: 15px;
+    font-family: asap;
+    font-size: 15px;
+    color: gray;
+    position: relative
+}
+
+.main .content {
+    font-size: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: left;
+    color: black;
+    font-family: asap;
+    font-weight: normal;
+}
+/* -----------------------------------------------------------sideBar */
+.sideBar {
+    margin: 0;
+    padding: 0;
+} 
+
+.sideBar a {
+    text-decoration-color: #5677fc;
+    color: #ffffff;
+}
+
+/* .sideBar ul {
+    list-style: none;
+    padding: 0 10px;
+    margin: 0 10px;
+}
+
+.sideBar li::before {
+    color: gray;
+    content: '\2022';
+} */
+
+.sideBar .border {
+    border: 1px solid #ffffff;
+    margin-bottom: 20px;
+}
+/* -------------------------kind-left */
+.border .kind-left {
+    margin: 8px 15px;
+    border-left: 5px solid #5677fc;
+    border-bottom: 1px solid #5677fc;
+    font-size: 18px;
+    font-family: asap;
+    font-weight: 550;
+    text-align: left;
+}
+
+.border .kind-left li {
+    text-align: left;
+}
+/* -------------------------kind-right */
+/* .border .kind-right {
+    margin: 8px 15px;
+    border-right: 5px solid #5677fc;
+    border-bottom: 1px solid #5677fc;
+    font-size: 18px;
+    font-family: asap;
+    font-weight: 550;
+    text-align: right;
+}
+
+.border .kind-right li {
+    text-align: right;
+} */
+
+/* ------------------------------------------------------------ back2top */
+.back2top {
+    position: fixed;
+    bottom: 10%;
+    color: #fff;
+    font-size: 18px;
+    font-family: asap;
+    font-weight: 400;
+}
+
+.back2top a {
+    text-decoration: none;
+    color: #fff;
+    -webkit-transition: .3s;
+    transition: .3s;
+    display: inline-block;
+    padding: 5px 8px;
+}
+
+
+
